@@ -1,0 +1,14 @@
+syntax = "proto3";
+package hieuvubk.checker.checker;
+
+import "gogoproto/gogo.proto";
+import "checker/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/hieuvubk/checker/x/checker/types";
+
+// GenesisState defines the checker module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
